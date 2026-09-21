@@ -10,20 +10,26 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 function App() {
   return (
-    <Routes>
-      <Route element={<RootLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/product/:slug" element={<Product />} />
-        <Route path="/archive" element={<Archive />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Route>
+    <>
+      <ScrollToTop />
 
-      <Route path="/checkout" element={<Checkout />} />
-    </Routes>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/product/:slug" element={<Product />} />
+          <Route path="/archive" element={<Archive />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </>
   );
 }
 

@@ -72,7 +72,7 @@ function Checkout() {
       <header className="checkoutHeader">
         <Link to="/" className="checkoutLogo">
           <img
-            src="/images/branding/blkgrlspc-logo.png"
+            src="/images/branding/blkgrlspc.png"
             alt="blkgrlspc"
           />
         </Link>

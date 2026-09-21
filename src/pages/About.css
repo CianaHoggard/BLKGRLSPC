@@ -3,13 +3,16 @@
 }
 
 .aboutHero {
+  min-height: calc(100svh - 130px);
+
   display: grid;
   grid-template-columns: 1fr 3fr;
+  align-content: center;
 
   gap: 2rem;
 
-  padding-top: clamp(4rem, 8vw, 8rem);
-  padding-bottom: clamp(4rem, 8vw, 8rem);
+  padding-top: clamp(3rem, 5vw, 5rem);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
 }
 
 .aboutEyebrow {
@@ -18,6 +21,7 @@
   color: var(--text-muted);
 
   font-size: 0.7rem;
+
   text-transform: uppercase;
   letter-spacing: 0.14em;
 }
@@ -26,10 +30,13 @@
   margin: 0;
 
   font-family: var(--font-display);
-  font-size: clamp(4rem, 9vw, 9rem);
+
+  font-size: clamp(4rem, 8vw, 8rem);
 
   font-weight: 400;
+
   line-height: 0.82;
+
   letter-spacing: -0.06em;
 
   color: var(--deep-brown);
@@ -37,30 +44,40 @@
 
 .aboutStory {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
 
-  gap: clamp(3rem, 8vw, 9rem);
+  grid-template-columns:
+    minmax(340px, 0.8fr)
+    minmax(0, 1fr);
+
+  gap: clamp(4rem, 7vw, 8rem);
 
   align-items: center;
 
+  margin-top: 0;
+
+  padding-top: 2rem;
   padding-bottom: var(--section-space);
 }
 
 .aboutArtwork {
-  min-height: 550px;
+  width: min(100%, 570px);
+
+  justify-self: center;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: clamp(2rem, 5vw, 5rem);
+  padding: clamp(1.75rem, 3vw, 3rem);
 
   background: var(--soft-pink);
 }
 
 .aboutArtwork img {
-  width: min(100%, 600px);
+  width: 100%;
   height: auto;
+
+  display: block;
 
   object-fit: contain;
 }
@@ -71,6 +88,7 @@
   color: var(--brown);
 
   font-size: clamp(1rem, 1.25vw, 1.15rem);
+
   line-height: 1.7;
 }
 
@@ -82,6 +100,7 @@
   font-family: var(--font-display);
 
   font-size: clamp(1.6rem, 3vw, 2.5rem);
+
   line-height: 1.2;
 
   color: var(--deep-brown);
@@ -89,11 +108,13 @@
 
 .aboutLink {
   display: inline-flex;
+
   align-items: center;
 
   gap: 3rem;
 
   margin-top: 1.5rem;
+
   padding-bottom: 0.4rem;
 
   border-bottom: 1px solid var(--brown);
@@ -101,12 +122,15 @@
   color: var(--deep-brown);
 
   font-size: 0.75rem;
+
   text-transform: uppercase;
+
   letter-spacing: 0.1em;
 }
 
 .aboutLink:hover {
   color: var(--coral);
+
   border-color: var(--coral);
 }
 
@@ -114,18 +138,23 @@
   padding-block: clamp(6rem, 12vw, 12rem);
 
   background: var(--coral);
+
   color: var(--deep-brown);
 }
 
 .aboutStatement p {
   max-width: 1200px;
+
   margin: 0;
 
   font-family: var(--font-display);
+
   font-size: clamp(3.5rem, 8vw, 8rem);
 
   font-weight: 400;
+
   line-height: 0.88;
+
   letter-spacing: -0.055em;
 }
 
@@ -137,7 +166,9 @@
 
 .aboutShopInner {
   display: flex;
+
   align-items: flex-end;
+
   justify-content: space-between;
 
   gap: 3rem;
@@ -149,7 +180,9 @@
   color: var(--text-muted);
 
   font-size: 0.68rem;
+
   text-transform: uppercase;
+
   letter-spacing: 0.14em;
 }
 
@@ -157,9 +190,11 @@
   margin: 0;
 
   font-family: var(--font-display);
+
   font-size: clamp(2.5rem, 5vw, 5rem);
 
   font-weight: 400;
+
   letter-spacing: -0.045em;
 
   color: var(--deep-brown);
@@ -169,16 +204,21 @@
   min-width: 230px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding: 1rem 1.25rem;
 
   background: var(--deep-brown);
+
   color: var(--cream);
 
   font-size: 0.72rem;
+
   text-transform: uppercase;
+
   letter-spacing: 0.1em;
 
   transition:
@@ -188,6 +228,7 @@
 
 .aboutShopButton:hover {
   background: var(--coral);
+
   color: var(--deep-brown);
 
   transform: translateY(-2px);
@@ -195,34 +236,93 @@
 
 @media (max-width: 850px) {
   .aboutHero {
+    min-height: auto;
+
     grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .aboutHero h1 {
+    font-size: clamp(3.8rem, 12vw, 6rem);
   }
 
   .aboutStory {
     grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    padding-top: 0;
   }
 
   .aboutArtwork {
-    min-height: auto;
+    width: min(100%, 540px);
+
+    justify-self: center;
+  }
+
+  .aboutCopy {
+    max-width: 700px;
   }
 }
 
 @media (max-width: 600px) {
   .aboutHero {
-    gap: 1.5rem;
+    gap: 1.25rem;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .aboutHero h1 {
+    font-size: clamp(3.3rem, 15vw, 5rem);
+
+    line-height: 0.86;
   }
 
   .aboutStory {
-    gap: 3rem;
+    gap: 2.5rem;
+
+    padding-bottom: 4rem;
   }
 
   .aboutArtwork {
-    padding: 2rem;
+    width: 100%;
+
+    padding: 1.5rem;
+  }
+
+  .aboutCopy {
+    font-size: 1rem;
+
+    line-height: 1.65;
+  }
+
+  .aboutLead {
+    font-size: clamp(1.7rem, 8vw, 2.3rem);
+  }
+
+  .aboutLink {
+    gap: 2rem;
+  }
+
+  .aboutStatement {
+    padding-block: 5rem;
+  }
+
+  .aboutStatement p {
+    font-size: clamp(3rem, 14vw, 5rem);
   }
 
   .aboutShopInner {
     align-items: stretch;
+
     flex-direction: column;
+
+    gap: 2rem;
   }
 
   .aboutShopButton {

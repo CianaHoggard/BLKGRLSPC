@@ -28,7 +28,7 @@ function Footer() {
           <div>
             <p className="footerLabel">social</p>
 
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/blkgrlspc" target="_blank" rel="noreferrer">
               instagram ↗
             </a>
           </div>

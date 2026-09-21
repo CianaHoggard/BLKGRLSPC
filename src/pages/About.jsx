@@ -18,7 +18,7 @@ function About() {
         <div className="aboutStory">
           <div className="aboutArtwork">
             <img
-              src="/images/branding/blkgrlspc-logo.png"
+              src="/images/branding/happy.jpg"
               alt="BLKGRLSPC Black Girl Magic illustration"
             />
           </div>
