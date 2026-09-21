@@ -1,0 +1,154 @@
+.hero {
+  min-height: calc(100svh - 125px);
+  display: flex;
+  align-items: center;
+
+  background: var(--sand);
+
+  padding-block: clamp(2.5rem, 5vw, 6rem);
+}
+
+.heroInner {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+  align-items: center;
+
+  gap: clamp(3rem, 7vw, 9rem);
+}
+
+.heroContent h1 {
+  margin-bottom: 2rem;
+
+  font-family: var(--font-display);
+  font-size: var(--heading-xl);
+  font-weight: 400;
+
+  line-height: 0.78;
+  letter-spacing: -0.065em;
+
+  color: var(--deep-brown);
+}
+
+.heroEyebrow {
+  margin-bottom: 2rem;
+
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.heroDescription {
+  max-width: 420px;
+  margin-bottom: 2rem;
+
+  font-size: var(--body-lg);
+  line-height: 1.55;
+}
+
+.heroButton {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 1.3rem;
+  background: var(--salmon);
+  color: var(--deep-brown);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.heroButton:hover {
+  background: var(--dusty-pink);
+  transform: translateY(-2px);
+}
+
+.heroVisual {
+  width: 100%;
+}
+
+.heroArtwork {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--soft-pink);
+  overflow: hidden;
+}
+
+.heroArtwork img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+
+  transition: transform 600ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.heroArtwork:hover img {
+  transform: scale(1.03);
+}
+
+.heroCaption {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .heroInner {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent {
+    padding-top: 2rem;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(4rem, 17vw, 8rem);
+  }
+
+  .heroVisual {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .heroInner {
+    gap: 4rem;
+  }
+
+  .heroContent h1 {
+    line-height: 0.82;
+  }
+
+  .heroDescription {
+    max-width: 330px;
+  }
+
+  .heroButton {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

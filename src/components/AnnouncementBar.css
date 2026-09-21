@@ -1,0 +1,34 @@
+.announcement {
+  width: 100%;
+  overflow: hidden;
+  background: var(--deep-brown);
+  color: var(--cream);
+  padding: 0.7rem 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.announcementTrack {
+  display: flex;
+  width: max-content;
+  gap: 4rem;
+  white-space: nowrap;
+  animation: announcementScroll 24s linear infinite;
+}
+
+@keyframes announcementScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcementTrack {
+    animation: none;
+  }
+}

@@ -1,0 +1,44 @@
+:root {
+  /* BASE */
+  --cream: #f7efe7;
+  --warm-cream: #eadfd3;
+  --sand: #d8bea8;
+
+  /* DARKS */
+  --deep-brown: #2f211b;
+  --brown: #5a4034;
+  --soft-brown: #80665a;
+
+  /* PINK / CORAL */
+  --salmon: #eb8c96;
+  --coral: #e36c74;
+  --dusty-pink: #ce8992;
+  --rose: #b86f78;
+  --soft-pink: #f1c1c6;
+
+  /* GREEN */
+  --sage: #9a9a78;
+  --olive: #6d704f;
+  --deep-olive: #4c5038;
+
+  /* SMALL ACCENT */
+  --gold: #d5a840;
+
+  --text: #2f211b;
+  --text-muted: #7d6860;
+
+  --border: rgba(47, 33, 27, 0.16);
+
+  --page-width: 1600px;
+  --page-padding: clamp(1.25rem, 3vw, 3.5rem);
+  --section-space: clamp(4rem, 9vw, 9rem);
+
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --heading-xl: clamp(4rem, 10vw, 10rem);
+  --heading-lg: clamp(2.75rem, 6vw, 6rem);
+  --heading-md: clamp(2rem, 4vw, 3.5rem);
+
+  --transition: 250ms ease;
+}

@@ -1,0 +1,249 @@
+.contactLead {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.15;
+
+  color: var(--deep-brown);
+}
+
+.contactArchiveNote {
+  margin-top: 3rem;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--text-muted);
+
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.contactPage {
+  background: var(--cream);
+}
+
+.contactInner {
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(6rem, 10vw, 10rem);
+}
+
+.contactHeading {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  gap: 2rem;
+
+  margin-bottom: clamp(5rem, 9vw, 9rem);
+}
+
+.contactEyebrow {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.contactHeading h1 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 9vw, 9rem);
+
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+
+  color: var(--deep-brown);
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: clamp(4rem, 9vw, 10rem);
+}
+
+.contactIntro {
+  max-width: 450px;
+
+  color: var(--brown);
+
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.contactIntro > p {
+  margin-bottom: 1.5rem;
+}
+
+.contactDetails {
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.contactDetails > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+}
+
+.contactDetails span {
+  color: var(--text-muted);
+
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.contactDetails a {
+  width: fit-content;
+
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+
+  color: var(--deep-brown);
+}
+
+.contactDetails a:hover {
+  color: var(--coral);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.65rem;
+}
+
+.formGroup label {
+  color: var(--text-muted);
+
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+
+  padding: 1rem 0;
+
+  border: none;
+  border-bottom: 1px solid var(--brown);
+  border-radius: 0;
+
+  background: transparent;
+
+  color: var(--deep-brown);
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.formGroup textarea {
+  resize: vertical;
+
+  min-height: 160px;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.65;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+
+  border-color: var(--coral);
+}
+
+.contactSubmit {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.1rem 1.25rem;
+
+  background: var(--coral);
+  color: var(--deep-brown);
+
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.contactSubmit:hover {
+  background: var(--salmon);
+
+  transform: translateY(-2px);
+}
+
+.contactBottom {
+  padding-block: clamp(5rem, 11vw, 10rem);
+
+  background: var(--deep-olive);
+  color: var(--cream);
+}
+
+.contactBottom p {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 8rem);
+
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+@media (max-width: 800px) {
+  .contactHeading {
+    grid-template-columns: 1fr;
+  }
+
+  .contactContent {
+    grid-template-columns: 1fr;
+  }
+
+  .contactIntro {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contactHeading {
+    gap: 1.25rem;
+  }
+
+  .contactContent {
+    gap: 4rem;
+  }
+
+  .contactDetails {
+    margin-top: 3rem;
+  }
+}
